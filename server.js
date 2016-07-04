@@ -1,5 +1,9 @@
 const http = require('http');
 
+process.on('SIGINT', function() {
+  process.exit();
+});
+
 const hostname = '0.0.0.0';
 const port = 3000;
 
