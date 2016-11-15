@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  nginx:
+    image: "nginx:alpine"
+    ports:
+      - 80:80
+    links:
+      - schnoeselclub:schnoeselclub
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+
+  schnoeselclub:
+    image: "schnoeselclub"
+    ports:
+      - 127.0.0.1:3000:3000
