@@ -16,3 +16,5 @@ services:
     image: "vm-registry.sandbox.lan/fkleine/schnoeselclub:2.0"
     ports:
       - 127.0.0.1:3000:3000
+    volumes:
+      - ./server.js:/opt/server.js:ro
